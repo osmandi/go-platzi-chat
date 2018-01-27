@@ -1,0 +1,41 @@
+{{set . "title" "Ingreso"}}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:blue">
+  <div class="container">
+    <div class="row">
+        <div class= "text-primary"> 
+          <h1>Bienvenido a Plazi Chat!</h1>
+          <p></p>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+        <div id="singin">
+            <form action="{{ url "App.Platzi" }}">
+            {{template "flash.html" .}}
+            <p>
+                <label for="user">Elige el nick</label>
+                <input type="text" name="user" id="user">
+            </p>
+            <p>                
+                <label for="user">Tipo de Sincronización</label>
+                <select name="messageType" id="messageType">
+                    <option></option>
+                    <option value="refresh">Refresh</option>
+                    <option value="polling">Polling</option>
+                    <option value="websocket">WebSocket</option>
+                </select>
+            </p>
+            <input type="submit" id="enviar" value="Ingresar">
+            </form>
+        </div>
+    </div>
+  </div>
+</div>
+    
+{{template "footer.html" .}}

@@ -1,0 +1,34 @@
+# Routes Config
+#
+# This file defines all application routes (Higher priority routes first)
+#
+
+module:testrunner
+# module:jobs
+
+
+GET     /                                       App.Index
+
+GET     /platzi                                 App.Platzi
+
+GET     /refresh                                Refresh.Index
+GET     /refresh/room                           Refresh.Room
+POST    /refresh/room/say                       Refresh.Say
+GET     /refresh/room/leave                     Refresh.Leave
+
+GET     /polling/room                           Polling.Room
+GET     /polling/room/messages                  Polling.WaitMessages
+POST    /polling/room/messages                  Polling.Say
+GET     /polling/room/leave                     Polling.Leave
+
+GET     /websocket/room                         WebSocket.Room
+WS      /Websocket/room/socket                  WebSocket.RoomSocket
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/*filepath                       Static.Serve("public")
+
+# Catch all
+# *       /:controller/:action                    :controller.:action

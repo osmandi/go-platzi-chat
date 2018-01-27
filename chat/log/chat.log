@@ -1,0 +1,9 @@
+ERROR 2018/01/21 08:20:14 Route validation error (in /home/tito/go/src/platzi/chat/conf/routes:17): revel/controller: failed to find action leave
+ERROR 2018/01/21 08:20:14 Error running: exit status 2
+ERROR 2018/01/21 08:20:20 Route validation error (in /home/tito/go/src/platzi/chat/conf/routes:17): revel/controller: failed to find action leave
+ERROR 2018/01/21 08:20:20 Error running: exit status 2
+ERROR 2018/01/24 11:22:47 # platzi/chat/app/controllers
+/home/tito/go/src/platzi/chat/app/controllers/refresh.go:17:39: too many arguments in call to routes.Refresh.Room
+	have (string)
+	want ()
+
